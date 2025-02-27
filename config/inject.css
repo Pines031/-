@@ -1,0 +1,74 @@
+#starBg {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: -998;
+    opacity: 0.6;
+}
+
+#site-title {
+    animation: LetterColor 2s linear infinite;
+    /* 计算每个字的动画起始时间 */
+    animation-delay: calc(0.1s * var(--o));
+
+}
+.menus_item span {
+    animation: LetterColor 10s linear infinite;
+    /* 计算每个字的动画起始时间 */
+    animation-delay: calc(0.1s * var(--o));
+}
+#subtitle {
+    animation: LetterColor 4s linear infinite;
+    /* 计算每个字的动画起始时间 */
+    animation-delay: calc(0.1s * var(--o));
+}
+.site-name {
+    animation: LetterColor 10s linear infinite;
+    /* 计算每个字的动画起始时间 */
+    animation-delay: calc(0.1s * var(--o));
+}
+@keyframes LetterColor {
+    0% {
+        color: #fff;
+        /* 利用模糊距离不同的阴影实现霓虹灯光晕效果 */
+        text-shadow: 
+        0 0 1px #00b3ff,
+        0 0 2px #00b3ff,
+        0 0 3px #00b3ff,
+        0 0 4px #00b3ff,
+        0 0 5px #00b3ff,
+        0 0 6px #00b3ff,
+        0 0 7px #00b3ff,
+        0 0 8px #00b3ff;
+        /* 设置高斯模糊与色调，实现模糊效果和颜色变换 */
+        filter: blur(0.1px) hue-rotate(0deg);
+    }
+    30%,
+    70% {
+        color: #fff;
+        /* 减少光晕大小 */
+        text-shadow: 
+        0 0 8px #00b3ff,
+        0 0 7px #00b3ff,
+        0 0 6px #00b3ff,
+        0 0 5px #00b3ff,
+        0 0 4px #00b3ff,
+        0 0 3px #00b3ff,
+        0 0 2px #00b3ff,
+        0 0 1px #00b3ff;
+        /* 色调变换360度 */
+        filter: blur(0.1px) hue-rotate(360deg);
+    }
+    100% {
+        /* 动画结束字变透明 */
+        color: #fff;
+        /* 动画结束消除阴影 */
+        text-shadow: none;
+        /* 动画结束色调重置 */
+        filter: blur(0.1px) hue-rotate(0deg);
+    }
+}
