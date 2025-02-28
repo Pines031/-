@@ -73,3 +73,13 @@
         filter: blur(0.1px) hue-rotate(0deg);
     }
 }
+
+.cardHover, .layout > div:first-child:not(.nc), #recent-posts .recent-post-item, #article-container .shuoshuo-item, #aside-content .card-widget, .layout .pagination > *:not(.space) {
+    background: #0c1528 !important;
+    border: 1px solid #020203 !important;
+    filter: brightness(1.1) !important; 
+    transition: all 0.3s !important;
+}
+.page {
+    filter:brightness(1.5) !important;
+}
