@@ -37,6 +37,7 @@ function random(min, max) {
     draw() {
       const x = Math.sin(this.timePassed) * this.orbitRadius + this.orbitX;
       const y = Math.cos(this.timePassed) * this.orbitRadius + this.orbitY;
+ 
       let twinkle = random(10);
   
       if (twinkle === 1 && this.alpha > 0) {
@@ -62,35 +63,35 @@ function random(min, max) {
   var bg = document.getElementById("web_bg");
   if (hour >= 0 && hour <5){
   
-              bg.style.backgroundImage = "url('config/06.jpg')";
+              bg.style.backgroundImage = "url('/blog/config/06.jpg')";
   
   }
   
   if (hour >= 5 && hour <8){
   
-              bg.style.backgroundImage = "url('config/01.jpg')";
+              bg.style.backgroundImage = "url('/blog/config/01.jpg')";
   
   }
   
   if (hour >= 8 && hour <11){
   
-              bg.style.backgroundImage = "url('config/02.jpg')";
+              bg.style.backgroundImage = "url('/blog/config/02.jpg')";
   
   }
   
   if (hour >= 11 && hour <13){
   
-              bg.style.backgroundImage = "url('config/03.jpg')";
+              bg.style.backgroundImage = "url('/blog/config/03.jpg')";
   
   }
   
   if (hour >= 13 && hour < 17){
   
-               bg.style.backgroundImage = "url('config/04.jpg')";  
+               bg.style.backgroundImage = "url('/blog/config/04.jpg')";  
   }
   
   if (hour >= 17 && hour < 24){
   
-              bg.style.backgroundImage = "url('config/05.jpg')";
+              bg.style.backgroundImage = "url('/blog/config/05.jpg')";
   }
   
